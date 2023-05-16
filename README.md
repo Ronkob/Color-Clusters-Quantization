@@ -10,7 +10,7 @@ this method works by finding the "direction" of color for each object in the ima
 
 ## How it works
 
-* recognize the different "color clusters" in the image, and see that they are infact linear lines - defined by the lightning and shadows of the object of a solid color.
+* recognize the different "color clusters" in the image, and see that they are in fact linear lines - defined by the lightning and shadows of objects of a solid color.
 
 <img alt="3d_histogrambefore_quantization.png" src="media for readme/3d_histogrambefore_quantization.png" width="400"/>
 
@@ -35,3 +35,4 @@ this method works by finding the "direction" of color for each object in the ima
 1. [ ] decide on a better clustering algorithm, and implement a non maxima suppression algorithm to find local maxima in the hough space.
 2. [ ] implement a vectorized version of the projection of the points to the lines, it's not efficient to do it in a for loop like the current naive implementation.
 3. [ ] implement a file format to save the quantized image, and the color clusters that will compress the image. 
+4. [ ] make the plots neater and refactor the code
