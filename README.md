@@ -6,11 +6,11 @@ this method works by finding the "direction" of color for each object in the ima
 
 `I will demonstrate it by using this image`
 
-![colored balls.png](media for readme/colored%20balls.png)
+<img alt="colored balls.png" src="media for readme/colored%20balls.png" width="400"/>
 ## How it works
 * recognize the different "color clusters" in the image, and see that they are infact linear lines - defined by the lightning and shadows of the object of a solid color.
 
-![3d_histogrambefore_quantization.png](media for readme/3d_histogrambefore_quantization.png)
+<img alt="3d_histogrambefore_quantization.png" src="media for readme/3d_histogrambefore_quantization.png" width="400"/>
 * use a special version of hough transform to find the "direction" of the color cluster.
   - this was implemented by creating a hough space of the lines in their polar representation, assuming they all are going through the origin.
   - so, that gives us a 2d space of XY plane theta, and XZ plane theta.
@@ -18,14 +18,14 @@ this method works by finding the "direction" of color for each object in the ima
   - this was done by using DBSCAN clustering on the hough space we want to quantize to.
   - the result of the clustering is the centers of the clusters in the hough space, and the line polar equations that represent the color clusters.
 
-<img alt="DBSCAN_colored balls small.jpg.png" src="media%20for%20readme%2FDBSCAN_colored%20balls%20small.jpg.png" width="500"/>
+<img alt="DBSCAN_colored balls small.jpg.png" src="media%20for%20readme%2FDBSCAN_colored%20balls%20small.jpg.png" width="400"/>
 
 * now, we can quantize the image by transforming each point to each closest representation on one of the lines (a.k.a the vectors)
 
-![3d_histogramafter_quantization.png](media for readme/3d_histogramafter_quantization.png)
+<img alt="3d_histogramafter_quantization.png" src="media for readme/3d_histogramafter_quantization.png" width="400"/>
 * examine the results:
 
-![original_and_new.png](media for readme/original_and_new.png)
+<img alt="original_and_new.png" src="media for readme/original_and_new.png" width="400"/>
 
 # Stuff that still need to be done:
 1. [ ] decide on a better clustering algorithm, and implement a non maxima suppression algorithm to find local maxima in the hough space.
