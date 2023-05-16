@@ -1,4 +1,4 @@
-# RKquantization
+# Color Clusters Quantization
 
 This is a POC of my new color-quantization technic - that could be used to reduce the number of colors in an image, and represent each pixel with a pair of 2-bit vector choosing, and 4-bit R value on the vector.
 
