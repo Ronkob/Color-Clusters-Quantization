@@ -7,10 +7,13 @@ this method works by finding the "direction" of color for each object in the ima
 `I will demonstrate it by using this image`
 
 <img alt="colored balls.png" src="media for readme/colored%20balls.png" width="400"/>
+
 ## How it works
+
 * recognize the different "color clusters" in the image, and see that they are infact linear lines - defined by the lightning and shadows of the object of a solid color.
 
 <img alt="3d_histogrambefore_quantization.png" src="media for readme/3d_histogrambefore_quantization.png" width="400"/>
+
 * use a special version of hough transform to find the "direction" of the color cluster.
   - this was implemented by creating a hough space of the lines in their polar representation, assuming they all are going through the origin.
   - so, that gives us a 2d space of XY plane theta, and XZ plane theta.
@@ -23,6 +26,7 @@ this method works by finding the "direction" of color for each object in the ima
 * now, we can quantize the image by transforming each point to each closest representation on one of the lines (a.k.a the vectors)
 
 <img alt="3d_histogramafter_quantization.png" src="media for readme/3d_histogramafter_quantization.png" width="400"/>
+
 * examine the results:
 
 <img alt="original_and_new.png" src="media for readme/original_and_new.png" width="400"/>
