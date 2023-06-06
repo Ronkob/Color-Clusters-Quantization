@@ -53,7 +53,7 @@ def trasform_points(x, y, z):
     """
     thetas_xy = np.arctan2(y, x)
     thetas_xz = np.arctan2(z, x)
-    r_xyz = np.sqrt(x ** 2 + y ** 2 + z ** 2)
+    r_xyz = np.sqrt((x ** 2) + (y ** 2) + (z ** 2))
 
     return np.stack([thetas_xy, thetas_xz, r_xyz], axis=1)
 
